@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- include A-Frame obviously -->
+    <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+    <!-- include ar.js for A-Frame -->
+    <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+</head>
+
+<body style='margin : 0px; overflow: hidden;'>
+
+    <a-scene embedded arjs>
+
+        <a-assets>
+            <a-asset-item id="Swan-obj" src="../IT18020922/Swan.obj"></a-asset-item>
+            <a-asset-item id="Bear-obj" src="../IT18161434/bear_object.obj"></a-asset-item>
+            <a-asset-item id="Whale-obj" src="../IT17059428/Whale.obj"></a-asset-item>
+            <a-asset-item id="Vulture-obj" src="../IT18147360/GoldenVulture.obj"></a-asset-item>
+        </a-assets>
+
+        <!--Bear-->
+        <a-marker type="pattern" url='../IT18161434/pattern-bear.patt'>
+			<a-entity obj-model="obj: #Bear-obj;" material="src: ../IT18161434/bear_marker.png" position="0 0 0" rotation="-50 90 -90" scale="0.4 0.4 0.4"></a-entity>
+			<a-text value="\n\n BEAR \n IT18161434\n Jayasingha I.B" height="4" width="5" align="center"weight="bold" rotation="-90 0 0" color="#F70505" position="0 0 0.4"></a-text>
+        </a-marker>
+
+        <!--Swan-->
+        <a-marker type="pattern" url='../IT18020922/pattern-Swan.patt'>
+            <a-entity obj-model="obj: #Swan-obj;" material="src: ../IT18020922/Swan.jpg" position="0 0 0" rotation="0 -180 -140" scale="0.03 0.03 0.03"></a-entity>
+			<a-text value="\n\n Swan \n IT18020922\n WEERASINGHE K.C.N" height="5" width="5" align="center" weight="bold" rotation="-90 0 0" color="#F70505" position="0 0 0.4"></a-text>
+        </a-marker>
+
+        <!--Golden Vulture-->
+        <a-marker type="pattern" url="../IT18147360/pattern-Vulture.patt">
+			<a-entity obj-model="obj: #Vulture-obj;" material="src: ../IT18147360/GoldenVulture.jpg" position="0 0 -0.3" rotation="210 0 -90" scale="0.02 0.02 0.02"></a-entity>
+			<a-text value="\n\n Golden Vulture \n IT18147360\n MALASSRI I.M.S." height="5" width="5" align="center" weight="bold" rotation="-90 0 0" color="#F70505" position="0 0 0.4"></a-text>
+        </a-marker>
+
+        <!--Whale-->
+        <a-marker type="pattern" url='../IT17059428/pattern-Whale.patt'>
+			<a-entity obj-model="obj: #Whale-obj;" material="src: ../IT17059428/Whale.jpg" position="0 0 -0.5" rotation="0 -180 0" scale="0.005 0.005 0.005"></a-entity>
+			<a-text value="\n\n Whale \n IT17059428\n Amarasinghe A.A.S.M" height="4" width="5" align="center" weight="bold" rotation="-90 0 0" color="#F70505" position="0 0 0.4"></a-text>
+        </a-marker>
+
+        <a-entity camera></a-entity>
+
+    </a-scene>
+
+</body>
+
+</html>
